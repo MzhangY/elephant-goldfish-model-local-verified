@@ -1,3 +1,5 @@
+> **本地验证 Fork（非原创项目）**：见 [中文验证报告](README.zh-CN.md)。保留失败、跳过和未运行项，原作者与许可证不变。
+
 <p align="center">
   <a href="https://egm.dev"><img src="docs/assets/readme-header.svg" width="480" height="116" alt="Elephant-Goldfish Model"></a>
 </p>

@@ -1,0 +1,161 @@
+...........................................................................................................................................s............ [ 39%]
+s..........................................FF......s..FFF.........................................FF.................................................... [ 78%]
+............................FFFF..FFFF.............F.................................                                                                    [100%]
+========================================================================== FAILURES ===========================================================================
+____________________________________________________ test_install_preserves_resources_and_native_contract _____________________________________________________
+tests\unit\test_opencode_adapter.py:21: in test_install_preserves_resources_and_native_contract
+    config_path = ADAPTER["install"](destination)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+adapters\opencode\install.py:116: in install
+    (skills / skill_name).symlink_to(skill.parent, target_is_directory=True)
+<BASE_PYTHON>\Lib\pathlib\_local.py:789: in symlink_to
+    os.symlink(target, self, target_is_directory)
+E   OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\e20\\test_install_preserves_resourc0\\EGM candidate ü\\bundle\\skills\\egm-bootstrap' -> '<CODEX_WORKSPACE>\\e20\\test_install_preserves_resourc0\\EGM candidate ü\\skills\\egm-bootstrap'
+____________________________________________________ test_stage_required_reports_preserve_context_boundary ____________________________________________________
+tests\unit\test_opencode_adapter.py:84: in test_stage_required_reports_preserve_context_boundary
+    config = json.loads(ADAPTER["install"](destination).read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+adapters\opencode\install.py:116: in install
+    (skills / skill_name).symlink_to(skill.parent, target_is_directory=True)
+<BASE_PYTHON>\Lib\pathlib\_local.py:789: in symlink_to
+    os.symlink(target, self, target_is_directory)
+E   OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\e20\\test_stage_required_reports_pr0\\candidate\\bundle\\skills\\egm-bootstrap' -> '<CODEX_WORKSPACE>\\e20\\test_stage_required_reports_pr0\\candidate\\skills\\egm-bootstrap'
+______________________________________________________ test_symlink_parent_cannot_bypass_path_validation ______________________________________________________
+tests\unit\test_opencode_adapter.py:133: in test_symlink_parent_cannot_bypass_path_validation
+    alias.symlink_to(target, target_is_directory=True)
+<BASE_PYTHON>\Lib\pathlib\_local.py:789: in symlink_to
+    os.symlink(target, self, target_is_directory)
+E   OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\e20\\test_symlink_parent_cannot_byp0\\unsafe[glob]' -> '<CODEX_WORKSPACE>\\e20\\test_symlink_parent_cannot_byp0\\safe'
+___________________________________________________________ test_dangling_destination_is_untouched ____________________________________________________________
+tests\unit\test_opencode_adapter.py:141: in test_dangling_destination_is_untouched
+    destination.symlink_to(tmp_path / "absent")
+<BASE_PYTHON>\Lib\pathlib\_local.py:789: in symlink_to
+    os.symlink(target, self, target_is_directory)
+E   OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\e20\\test_dangling_destination_is_u0\\absent' -> '<CODEX_WORKSPACE>\\e20\\test_dangling_destination_is_u0\\candidate'
+_____________________________________________________________ test_required_reads_pass_env_rules ______________________________________________________________
+tests\unit\test_opencode_adapter.py:168: in test_required_reads_pass_env_rules
+    config = json.loads(ADAPTER["install"](destination).read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+adapters\opencode\install.py:116: in install
+    (skills / skill_name).symlink_to(skill.parent, target_is_directory=True)
+<BASE_PYTHON>\Lib\pathlib\_local.py:789: in symlink_to
+    os.symlink(target, self, target_is_directory)
+E   OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\e20\\test_required_reads_pass_env_r0\\candidate\\bundle\\skills\\egm-bootstrap' -> '<CODEX_WORKSPACE>\\e20\\test_required_reads_pass_env_r0\\candidate\\skills\\egm-bootstrap'
+_________________________________________________________ test_rejects_symlinked_runtime_paths[False] _________________________________________________________
+tests\unit\test_packaging.py:150: in test_rejects_symlinked_runtime_paths
+    victim.symlink_to(outside, target_is_directory=directory)
+<BASE_PYTHON>\Lib\pathlib\_local.py:789: in symlink_to
+    os.symlink(target, self, target_is_directory)
+E   OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\e20\\test_rejects_symlinked_runtime0\\outside' -> '<CODEX_WORKSPACE>\\e20\\test_rejects_symlinked_runtime0\\source\\assets\\icon.svg'
+_________________________________________________________ test_rejects_symlinked_runtime_paths[True] __________________________________________________________
+tests\unit\test_packaging.py:150: in test_rejects_symlinked_runtime_paths
+    victim.symlink_to(outside, target_is_directory=directory)
+<BASE_PYTHON>\Lib\pathlib\_local.py:789: in symlink_to
+    os.symlink(target, self, target_is_directory)
+E   OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\e20\\test_rejects_symlinked_runtime1\\outside' -> '<CODEX_WORKSPACE>\\e20\\test_rejects_symlinked_runtime1\\source\\agents'
+_______________________________________________________ test_rejects_dangling_output_symlinks[-claude] ________________________________________________________
+tests\unit\test_packaging.py:389: in test_rejects_dangling_output_symlinks
+    link.symlink_to(outside, target_is_directory=not suffix)
+<BASE_PYTHON>\Lib\pathlib\_local.py:789: in symlink_to
+    os.symlink(target, self, target_is_directory)
+E   OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\e20\\test_rejects_dangling_output_s0\\outside' -> '<CODEX_WORKSPACE>\\e20\\test_rejects_dangling_output_s0\\output\\egm-claude'
+_______________________________________________________ test_rejects_dangling_output_symlinks[-openai] ________________________________________________________
+tests\unit\test_packaging.py:389: in test_rejects_dangling_output_symlinks
+    link.symlink_to(outside, target_is_directory=not suffix)
+<BASE_PYTHON>\Lib\pathlib\_local.py:789: in symlink_to
+    os.symlink(target, self, target_is_directory)
+E   OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\e20\\test_rejects_dangling_output_s1\\outside' -> '<CODEX_WORKSPACE>\\e20\\test_rejects_dangling_output_s1\\output\\egm-openai'
+_____________________________________________________ test_rejects_dangling_output_symlinks[.zip-claude] ______________________________________________________
+tests\unit\test_packaging.py:389: in test_rejects_dangling_output_symlinks
+    link.symlink_to(outside, target_is_directory=not suffix)
+<BASE_PYTHON>\Lib\pathlib\_local.py:789: in symlink_to
+    os.symlink(target, self, target_is_directory)
+E   OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\e20\\test_rejects_dangling_output_s2\\outside' -> '<CODEX_WORKSPACE>\\e20\\test_rejects_dangling_output_s2\\output\\egm-claude.zip'
+_____________________________________________________ test_rejects_dangling_output_symlinks[.zip-openai] ______________________________________________________
+tests\unit\test_packaging.py:389: in test_rejects_dangling_output_symlinks
+    link.symlink_to(outside, target_is_directory=not suffix)
+<BASE_PYTHON>\Lib\pathlib\_local.py:789: in symlink_to
+    os.symlink(target, self, target_is_directory)
+E   OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\e20\\test_rejects_dangling_output_s3\\outside' -> '<CODEX_WORKSPACE>\\e20\\test_rejects_dangling_output_s3\\output\\egm-openai.zip'
+______________________________________ test_archive_claimed_after_preflight_is_not_overwritten[dangling-symlink-claude] _______________________________________
+tests\unit\test_packaging.py:419: in test_archive_claimed_after_preflight_is_not_overwritten
+    build(source, target, output)
+scripts\pack_plugin.py:114: in build
+    with zipfile.ZipFile(staged, "x", zipfile.ZIP_DEFLATED) as bundle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\unit\test_packaging.py:412: in claim_archive
+    archive.symlink_to(outside)
+<BASE_PYTHON>\Lib\pathlib\_local.py:789: in symlink_to
+    os.symlink(target, self, target_is_directory)
+E   OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\e20\\test_archive_claimed_after_pre2\\outside.zip' -> '<CODEX_WORKSPACE>\\e20\\test_archive_claimed_after_pre2\\output\\egm-claude.zip'
+______________________________________ test_archive_claimed_after_preflight_is_not_overwritten[dangling-symlink-openai] _______________________________________
+tests\unit\test_packaging.py:419: in test_archive_claimed_after_preflight_is_not_overwritten
+    build(source, target, output)
+scripts\pack_plugin.py:114: in build
+    with zipfile.ZipFile(staged, "x", zipfile.ZIP_DEFLATED) as bundle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\unit\test_packaging.py:412: in claim_archive
+    archive.symlink_to(outside)
+<BASE_PYTHON>\Lib\pathlib\_local.py:789: in symlink_to
+    os.symlink(target, self, target_is_directory)
+E   OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\e20\\test_archive_claimed_after_pre3\\outside.zip' -> '<CODEX_WORKSPACE>\\e20\\test_archive_claimed_after_pre3\\output\\egm-openai.zip'
+___________________________________________ test_archive_claimed_after_preflight_is_not_overwritten[symlink-claude] ___________________________________________
+tests\unit\test_packaging.py:419: in test_archive_claimed_after_preflight_is_not_overwritten
+    build(source, target, output)
+scripts\pack_plugin.py:114: in build
+    with zipfile.ZipFile(staged, "x", zipfile.ZIP_DEFLATED) as bundle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\unit\test_packaging.py:412: in claim_archive
+    archive.symlink_to(outside)
+<BASE_PYTHON>\Lib\pathlib\_local.py:789: in symlink_to
+    os.symlink(target, self, target_is_directory)
+E   OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\e20\\test_archive_claimed_after_pre4\\outside.zip' -> '<CODEX_WORKSPACE>\\e20\\test_archive_claimed_after_pre4\\output\\egm-claude.zip'
+___________________________________________ test_archive_claimed_after_preflight_is_not_overwritten[symlink-openai] ___________________________________________
+tests\unit\test_packaging.py:419: in test_archive_claimed_after_preflight_is_not_overwritten
+    build(source, target, output)
+scripts\pack_plugin.py:114: in build
+    with zipfile.ZipFile(staged, "x", zipfile.ZIP_DEFLATED) as bundle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\unit\test_packaging.py:412: in claim_archive
+    archive.symlink_to(outside)
+<BASE_PYTHON>\Lib\pathlib\_local.py:789: in symlink_to
+    os.symlink(target, self, target_is_directory)
+E   OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\e20\\test_archive_claimed_after_pre5\\outside.zip' -> '<CODEX_WORKSPACE>\\e20\\test_archive_claimed_after_pre5\\output\\egm-openai.zip'
+________________________________________ test_deterministic_claude_bundle_parity_catches_drift_and_ignores_design_docs ________________________________________
+tests\unit\test_pr_triage_review.py:835: in test_deterministic_claude_bundle_parity_catches_drift_and_ignores_design_docs
+    (mock_root / "scripts" / "pack_plugin.py").symlink_to(
+<BASE_PYTHON>\Lib\pathlib\_local.py:789: in symlink_to
+    os.symlink(target, self, target_is_directory)
+E   OSError: [WinError 1314] 客户端没有所需的特权。: '<WORKSPACE>\\outputs\\AI本地验证-2026-11-20\\EGM\\scripts\\pack_plugin.py' -> '<CODEX_WORKSPACE>\\e20\\test_deterministic_claude_bund0\\repo\\scripts\\pack_plugin.py'
+==================================================================== slowest 10 durations =====================================================================
+1.40s call     tests/unit/test_packaging.py::test_runtime_bundle_is_complete_and_reproducible[claude]
+1.32s call     tests/unit/test_packaging.py::test_refuses_hooks_and_overwrites
+1.21s call     tests/unit/test_copilot_adapter.py::test_copilot_relocated_resources
+1.20s call     tests/unit/test_releases.py::test_prepare_cleans_partial_output_after_build_failure
+1.15s call     tests/unit/test_packaging.py::test_runtime_bundle_is_complete_and_reproducible[openai]
+0.94s call     tests/unit/test_cursor.py::test_relocated_package_keeps_all_canonical_resources
+0.79s call     tests/unit/test_packaging.py::test_bundles_readme_images[claude]
+0.78s call     tests/unit/test_packaging.py::test_archive_claimed_after_preflight_is_not_overwritten[file-claude]
+0.77s call     tests/unit/test_packaging.py::test_claude_agent_reference_forms[./.claude-plugin/agents/style.md]
+0.77s call     tests/unit/test_releases.py::test_prepare_exact_archives
+=================================================================== short test summary info ===================================================================
+FAILED tests/unit/test_opencode_adapter.py::test_install_preserves_resources_and_native_contract - OSError: [WinError 1314] 客户端没有所需的特权。: 'C:\\User...
+FAILED tests/unit/test_opencode_adapter.py::test_stage_required_reports_preserve_context_boundary - OSError: [WinError 1314] 客户端没有所需的特权。: 'C:\\Use...
+FAILED tests/unit/test_opencode_adapter.py::test_symlink_parent_cannot_bypass_path_validation - OSError: [WinError 1314] 客户端没有所需的特权。: 'C:\\Users\\...
+FAILED tests/unit/test_opencode_adapter.py::test_dangling_destination_is_untouched - OSError: [WinError 1314] 客户端没有所需的特权。: '<USERPROFILE>\\Do...
+FAILED tests/unit/test_opencode_adapter.py::test_required_reads_pass_env_rules - OSError: [WinError 1314] 客户端没有所需的特权。: '<USERPROFILE>\\Docume...
+FAILED tests/unit/test_packaging.py::test_rejects_symlinked_runtime_paths[False] - OSError: [WinError 1314] 客户端没有所需的特权。: '<USERPROFILE>\\Docu...
+FAILED tests/unit/test_packaging.py::test_rejects_symlinked_runtime_paths[True] - OSError: [WinError 1314] 客户端没有所需的特权。: '<USERPROFILE>\\Docum...
+FAILED tests/unit/test_packaging.py::test_rejects_dangling_output_symlinks[-claude] - OSError: [WinError 1314] 客户端没有所需的特权。: '<USERPROFILE>\\D...
+FAILED tests/unit/test_packaging.py::test_rejects_dangling_output_symlinks[-openai] - OSError: [WinError 1314] 客户端没有所需的特权。: '<USERPROFILE>\\D...
+FAILED tests/unit/test_packaging.py::test_rejects_dangling_output_symlinks[.zip-claude] - OSError: [WinError 1314] 客户端没有所需的特权。: 'C:\\Users\\Window...
+FAILED tests/unit/test_packaging.py::test_rejects_dangling_output_symlinks[.zip-openai] - OSError: [WinError 1314] 客户端没有所需的特权。: 'C:\\Users\\Window...
+FAILED tests/unit/test_packaging.py::test_archive_claimed_after_preflight_is_not_overwritten[dangling-symlink-claude] - OSError: [WinError 1314] 客户端没有所...
+FAILED tests/unit/test_packaging.py::test_archive_claimed_after_preflight_is_not_overwritten[dangling-symlink-openai] - OSError: [WinError 1314] 客户端没有所...
+FAILED tests/unit/test_packaging.py::test_archive_claimed_after_preflight_is_not_overwritten[symlink-claude] - OSError: [WinError 1314] 客户端没有所需的特权...
+FAILED tests/unit/test_packaging.py::test_archive_claimed_after_preflight_is_not_overwritten[symlink-openai] - OSError: [WinError 1314] 客户端没有所需的特权...
+FAILED tests/unit/test_pr_triage_review.py::test_deterministic_claude_bundle_parity_catches_drift_and_ignores_design_docs - OSError: [WinError 1314] 客户端没...
+SKIPPED [1] tests\unit\test_copilot_adapter.py:107: Set EGM_COPILOT_OFFLINE=1 for native loader inspection
+SKIPPED [1] tests\unit\test_cursor.py:122: Set EGM_CURSOR_BUNDLE for the pinned native offline probe
+SKIPPED [1] tests\unit\test_opencode_adapter.py:110: Requires a literal backslash in a POSIX filename
+16 failed, 370 passed, 3 skipped in 69.89s (0:01:09)

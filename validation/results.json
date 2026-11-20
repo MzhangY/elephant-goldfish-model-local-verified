@@ -1,0 +1,204 @@
+{
+  "validated_at": "2026-11-20T16:23:53.674490+08:00",
+  "upstream": "google/elephant-goldfish-model",
+  "upstream_commit": "70406c4d22cc7ea8299637c2c5b44625c48b3f08",
+  "environment": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.5",
+    "cpu_only": true,
+    "upstream_pinned_torch": "2.9.1+cpu",
+    "pytest": "9.0.3",
+    "yaml": "6.0.3"
+  },
+  "tests": {
+    "egm_initial": {
+      "tests": 389,
+      "passed": 368,
+      "failed": 18,
+      "errors": 0,
+      "skipped": 3,
+      "failures": [
+        {
+          "test": "tests.unit.test_ci_workflow::test_ci_requires_successful_results[results0-True]",
+          "reason": "TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'"
+        },
+        {
+          "test": "tests.unit.test_ci_workflow::test_ci_requires_successful_results[results4-True]",
+          "reason": "TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'"
+        },
+        {
+          "test": "tests.unit.test_opencode_adapter::test_install_preserves_resources_and_native_contract",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_install_preserves_resourc0\\\\EGM candidate ü\\\\bundle\\\\skills\\\\egm-bootstrap' -> '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_install_preserves_resourc0\\\\EGM candidate ü\\\\skills\\\\egm-bootstrap'"
+        },
+        {
+          "test": "tests.unit.test_opencode_adapter::test_stage_required_reports_preserve_context_boundary",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_stage_required_reports_pr0\\\\candidate\\\\bundle\\\\skills\\\\egm-bootstrap' -> '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_stage_required_reports_pr0\\\\candidate\\\\skills\\\\egm-bootstrap'"
+        },
+        {
+          "test": "tests.unit.test_opencode_adapter::test_symlink_parent_cannot_bypass_path_validation",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_symlink_parent_cannot_byp0\\\\unsafe[glob]' -> '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_symlink_parent_cannot_byp0\\\\safe'"
+        },
+        {
+          "test": "tests.unit.test_opencode_adapter::test_dangling_destination_is_untouched",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_dangling_destination_is_u0\\\\absent' -> '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_dangling_destination_is_u0\\\\candidate'"
+        },
+        {
+          "test": "tests.unit.test_opencode_adapter::test_required_reads_pass_env_rules",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_required_reads_pass_env_r0\\\\candidate\\\\bundle\\\\skills\\\\egm-bootstrap' -> '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_required_reads_pass_env_r0\\\\candidate\\\\skills\\\\egm-bootstrap'"
+        },
+        {
+          "test": "tests.unit.test_packaging::test_rejects_symlinked_runtime_paths[False]",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_rejects_symlinked_runtime0\\\\outside' -> '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_rejects_symlinked_runtime0\\\\source\\\\assets\\\\icon.svg'"
+        },
+        {
+          "test": "tests.unit.test_packaging::test_rejects_symlinked_runtime_paths[True]",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_rejects_symlinked_runtime1\\\\outside' -> '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_rejects_symlinked_runtime1\\\\source\\\\agents'"
+        },
+        {
+          "test": "tests.unit.test_packaging::test_rejects_dangling_output_symlinks[-claude]",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_rejects_dangling_output_s0\\\\outside' -> '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_rejects_dangling_output_s0\\\\output\\\\egm-claude'"
+        },
+        {
+          "test": "tests.unit.test_packaging::test_rejects_dangling_output_symlinks[-openai]",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_rejects_dangling_output_s1\\\\outside' -> '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_rejects_dangling_output_s1\\\\output\\\\egm-openai'"
+        },
+        {
+          "test": "tests.unit.test_packaging::test_rejects_dangling_output_symlinks[.zip-claude]",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_rejects_dangling_output_s2\\\\outside' -> '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_rejects_dangling_output_s2\\\\output\\\\egm-claude.zip'"
+        },
+        {
+          "test": "tests.unit.test_packaging::test_rejects_dangling_output_symlinks[.zip-openai]",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_rejects_dangling_output_s3\\\\outside' -> '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_rejects_dangling_output_s3\\\\output\\\\egm-openai.zip'"
+        },
+        {
+          "test": "tests.unit.test_packaging::test_archive_claimed_after_preflight_is_not_overwritten[dangling-symlink-claude]",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_archive_claimed_after_pre2\\\\outside.zip' -> '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_archive_claimed_after_pre2\\\\output\\\\egm-claude.zip'"
+        },
+        {
+          "test": "tests.unit.test_packaging::test_archive_claimed_after_preflight_is_not_overwritten[dangling-symlink-openai]",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_archive_claimed_after_pre3\\\\outside.zip' -> '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_archive_claimed_after_pre3\\\\output\\\\egm-openai.zip'"
+        },
+        {
+          "test": "tests.unit.test_packaging::test_archive_claimed_after_preflight_is_not_overwritten[symlink-claude]",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_archive_claimed_after_pre4\\\\outside.zip' -> '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_archive_claimed_after_pre4\\\\output\\\\egm-claude.zip'"
+        },
+        {
+          "test": "tests.unit.test_packaging::test_archive_claimed_after_preflight_is_not_overwritten[symlink-openai]",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_archive_claimed_after_pre5\\\\outside.zip' -> '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_archive_claimed_after_pre5\\\\output\\\\egm-openai.zip'"
+        },
+        {
+          "test": "tests.unit.test_pr_triage_review::test_deterministic_claude_bundle_parity_catches_drift_and_ignores_design_docs",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<WORKSPACE>\\\\outputs\\\\AI本地验证-2026-11-20\\\\EGM\\\\scripts\\\\pack_plugin.py' -> '<WORKSPACE>\\\\work\\\\ai-validation\\\\pytest-egm-full\\\\test_deterministic_claude_bund0\\\\repo\\\\scripts\\\\pack_plugin.py'"
+        }
+      ],
+      "error_details": [],
+      "skip_details": [
+        {
+          "test": "tests.unit.test_copilot_adapter::test_copilot_native_offline_discovery",
+          "reason": "Set EGM_COPILOT_OFFLINE=1 for native loader inspection"
+        },
+        {
+          "test": "tests.unit.test_cursor::test_installed_cursor_native_loader",
+          "reason": "Set EGM_CURSOR_BUNDLE for the pinned native offline probe"
+        },
+        {
+          "test": "tests.unit.test_opencode_adapter::test_template_paths_are_rejected[bad\\\\path]",
+          "reason": "Requires a literal backslash in a POSIX filename"
+        }
+      ]
+    },
+    "egm_final": {
+      "tests": 389,
+      "passed": 370,
+      "failed": 16,
+      "errors": 0,
+      "skipped": 3,
+      "failures": [
+        {
+          "test": "tests.unit.test_opencode_adapter::test_install_preserves_resources_and_native_contract",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\\\e20\\\\test_install_preserves_resourc0\\\\EGM candidate ü\\\\bundle\\\\skills\\\\egm-bootstrap' -> '<CODEX_WORKSPACE>\\\\e20\\\\test_install_preserves_resourc0\\\\EGM candidate ü\\\\skills\\\\egm-bootstrap'"
+        },
+        {
+          "test": "tests.unit.test_opencode_adapter::test_stage_required_reports_preserve_context_boundary",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\\\e20\\\\test_stage_required_reports_pr0\\\\candidate\\\\bundle\\\\skills\\\\egm-bootstrap' -> '<CODEX_WORKSPACE>\\\\e20\\\\test_stage_required_reports_pr0\\\\candidate\\\\skills\\\\egm-bootstrap'"
+        },
+        {
+          "test": "tests.unit.test_opencode_adapter::test_symlink_parent_cannot_bypass_path_validation",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\\\e20\\\\test_symlink_parent_cannot_byp0\\\\unsafe[glob]' -> '<CODEX_WORKSPACE>\\\\e20\\\\test_symlink_parent_cannot_byp0\\\\safe'"
+        },
+        {
+          "test": "tests.unit.test_opencode_adapter::test_dangling_destination_is_untouched",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\\\e20\\\\test_dangling_destination_is_u0\\\\absent' -> '<CODEX_WORKSPACE>\\\\e20\\\\test_dangling_destination_is_u0\\\\candidate'"
+        },
+        {
+          "test": "tests.unit.test_opencode_adapter::test_required_reads_pass_env_rules",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\\\e20\\\\test_required_reads_pass_env_r0\\\\candidate\\\\bundle\\\\skills\\\\egm-bootstrap' -> '<CODEX_WORKSPACE>\\\\e20\\\\test_required_reads_pass_env_r0\\\\candidate\\\\skills\\\\egm-bootstrap'"
+        },
+        {
+          "test": "tests.unit.test_packaging::test_rejects_symlinked_runtime_paths[False]",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\\\e20\\\\test_rejects_symlinked_runtime0\\\\outside' -> '<CODEX_WORKSPACE>\\\\e20\\\\test_rejects_symlinked_runtime0\\\\source\\\\assets\\\\icon.svg'"
+        },
+        {
+          "test": "tests.unit.test_packaging::test_rejects_symlinked_runtime_paths[True]",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\\\e20\\\\test_rejects_symlinked_runtime1\\\\outside' -> '<CODEX_WORKSPACE>\\\\e20\\\\test_rejects_symlinked_runtime1\\\\source\\\\agents'"
+        },
+        {
+          "test": "tests.unit.test_packaging::test_rejects_dangling_output_symlinks[-claude]",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\\\e20\\\\test_rejects_dangling_output_s0\\\\outside' -> '<CODEX_WORKSPACE>\\\\e20\\\\test_rejects_dangling_output_s0\\\\output\\\\egm-claude'"
+        },
+        {
+          "test": "tests.unit.test_packaging::test_rejects_dangling_output_symlinks[-openai]",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\\\e20\\\\test_rejects_dangling_output_s1\\\\outside' -> '<CODEX_WORKSPACE>\\\\e20\\\\test_rejects_dangling_output_s1\\\\output\\\\egm-openai'"
+        },
+        {
+          "test": "tests.unit.test_packaging::test_rejects_dangling_output_symlinks[.zip-claude]",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\\\e20\\\\test_rejects_dangling_output_s2\\\\outside' -> '<CODEX_WORKSPACE>\\\\e20\\\\test_rejects_dangling_output_s2\\\\output\\\\egm-claude.zip'"
+        },
+        {
+          "test": "tests.unit.test_packaging::test_rejects_dangling_output_symlinks[.zip-openai]",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\\\e20\\\\test_rejects_dangling_output_s3\\\\outside' -> '<CODEX_WORKSPACE>\\\\e20\\\\test_rejects_dangling_output_s3\\\\output\\\\egm-openai.zip'"
+        },
+        {
+          "test": "tests.unit.test_packaging::test_archive_claimed_after_preflight_is_not_overwritten[dangling-symlink-claude]",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\\\e20\\\\test_archive_claimed_after_pre2\\\\outside.zip' -> '<CODEX_WORKSPACE>\\\\e20\\\\test_archive_claimed_after_pre2\\\\output\\\\egm-claude.zip'"
+        },
+        {
+          "test": "tests.unit.test_packaging::test_archive_claimed_after_preflight_is_not_overwritten[dangling-symlink-openai]",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\\\e20\\\\test_archive_claimed_after_pre3\\\\outside.zip' -> '<CODEX_WORKSPACE>\\\\e20\\\\test_archive_claimed_after_pre3\\\\output\\\\egm-openai.zip'"
+        },
+        {
+          "test": "tests.unit.test_packaging::test_archive_claimed_after_preflight_is_not_overwritten[symlink-claude]",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\\\e20\\\\test_archive_claimed_after_pre4\\\\outside.zip' -> '<CODEX_WORKSPACE>\\\\e20\\\\test_archive_claimed_after_pre4\\\\output\\\\egm-claude.zip'"
+        },
+        {
+          "test": "tests.unit.test_packaging::test_archive_claimed_after_preflight_is_not_overwritten[symlink-openai]",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<CODEX_WORKSPACE>\\\\e20\\\\test_archive_claimed_after_pre5\\\\outside.zip' -> '<CODEX_WORKSPACE>\\\\e20\\\\test_archive_claimed_after_pre5\\\\output\\\\egm-openai.zip'"
+        },
+        {
+          "test": "tests.unit.test_pr_triage_review::test_deterministic_claude_bundle_parity_catches_drift_and_ignores_design_docs",
+          "reason": "OSError: [WinError 1314] 客户端没有所需的特权。: '<WORKSPACE>\\\\outputs\\\\AI本地验证-2026-11-20\\\\EGM\\\\scripts\\\\pack_plugin.py' -> '<CODEX_WORKSPACE>\\\\e20\\\\test_deterministic_claude_bund0\\\\repo\\\\scripts\\\\pack_plugin.py'"
+        }
+      ],
+      "error_details": [],
+      "skip_details": [
+        {
+          "test": "tests.unit.test_copilot_adapter::test_copilot_native_offline_discovery",
+          "reason": "Set EGM_COPILOT_OFFLINE=1 for native loader inspection"
+        },
+        {
+          "test": "tests.unit.test_cursor::test_installed_cursor_native_loader",
+          "reason": "Set EGM_CURSOR_BUNDLE for the pinned native offline probe"
+        },
+        {
+          "test": "tests.unit.test_opencode_adapter::test_template_paths_are_rejected[bad\\\\path]",
+          "reason": "Requires a literal backslash in a POSIX filename"
+        }
+      ]
+    }
+  },
+  "upstream_runtime_source_modified": false,
+  "live_hooks_installed": false,
+  "paid_api_calls": false,
+  "model_or_training_data_downloaded": false,
+  "scope": "Pinned Windows CPU validation; not security audit, production certification, live agent effects or full LLM training."
+}
